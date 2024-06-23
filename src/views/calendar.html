@@ -1,0 +1,107 @@
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/calendar.css">
+    <link rel="stylesheet" href="/src/css/navbar.css">
+    <link rel="stylesheet" href="/src/css/loader.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200&display=swap" rel="stylesheet">
+    <title>Medine</title>
+</head>
+
+<body>
+
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="navbar">
+
+        <div class="button"><i class="fas fa-bars"></i></div>
+
+        <div class="logo">
+            <img src="/src/img/yit_logo_white.png" alt="">
+        </div>
+
+        <div class="pages">
+            <a href="/#" class="page">Anasayfa</a>
+            <a href="/#biography" class="page">Hakkımda</a>
+            <a href="/#tools" class="page">Araçlar</a>
+        </div>
+
+        <div class="social">
+            <a href="" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="" class="github"><i class="fab fa-github"></i></a>
+        </div>
+
+        <div class="contact">
+            <a href="" class="discord"><i class="fab fa-discord"></i> Discord</a>
+            <a href="" class="mail"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+
+        <div class="calendar">
+
+            <div class="select">
+                <input type="date" value="2023-01-01"  max="2040-12-31">
+            </div>
+
+            <div class="date">
+                <div class="year" id="box">
+                    <div class="title">Yıl</div>
+                    <div class="num">30</div>
+                </div>
+                <div class="month" id="box">
+                    <div class="title">Ay</div>
+                    <div class="num">30</div>
+                </div>
+                <div class="day" id="box">
+                    <div class="title">Gün</div>
+                    <div class="num">30</div>
+                </div>
+                <div class="hour" id="box">
+                    <div class="title">Saat</div>
+                    <div class="num">30</div>
+                </div>
+                <div class="min" id="box">
+                    <div class="title">Dakika</div>
+                    <div class="num">30</div>
+                </div>
+                <div class="sec" id="box">
+                    <div class="title">Saniye</div>
+                    <div class="num">30</div>
+                </div>
+            </div>
+
+            <div id="particle"></div>
+        </div>
+
+
+
+    </div>
+</body>
+
+<script type="text/javascript" src="/src/utils/vanilla-tilt.js"></script>
+<script type="text/javascript" src="/src/utils/particles.js"></script>
+
+
+<script type="text/javascript" src="/src/js/calendar.js"></script>
+<script type="text/javascript" src="/src/js/navbar.js"></script>
+<script type="text/javascript" src="/src/js/loader.js"></script>
+
+
+</html>

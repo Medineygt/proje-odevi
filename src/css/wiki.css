@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-width: 215px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: #222222;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .wiki {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+  width: 450px;
+  max-height: 650px;
+  padding: 10px 20px;
+  background-color: #36151e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .wiki .wiki-main {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .wiki .wiki-main .wiki-title {
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .wiki .wiki-main .wiki-title .title {
+  font-size: 30px;
+  color: #eee;
+  font-family: "Pridi", sans-serif;
+}
+
+.main .wiki .wiki-main .wiki-title .photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.main .wiki .wiki-main .wiki-title .photo img {
+  width: 100%;
+  height: 100%;
+}
+
+.main .wiki .wiki-main .wiki-desc {
+  margin-top: 20px;
+  width: 100%;
+  max-height: 250px;
+  padding: 15px;
+  overflow: auto;
+}
+
+.main .wiki .wiki-main .wiki-desc p {
+  color: #eee;
+  font-size: 13px;
+}
+
+.main .wiki .search div {
+  padding: 20px;
+  color: #e1e1e1;
+}
+
+.main .wiki .search div input {
+  border-radius: 100px;
+  padding: 6px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #eeeeee57;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  color: #6b6d6e;
+}
+
+.main .wiki .search div input:focus {
+  outline: none;
+  color: #cad9d7;
+  background-color: #484c5062;
+}
+
+.main .wiki .search div input::-webkit-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .wiki .search div input:-ms-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .wiki .search div input::-ms-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .wiki .search div input::placeholder {
+  color: #cad9d7;
+}
+
+.main .wiki .buttons {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .wiki .buttons .copy,
+.main .wiki .buttons .download {
+  margin: 0 auto;
+  color: #bababa;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.main .wiki .buttons .copy:hover,
+.main .wiki .buttons .download:hover {
+  color: #eee;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main .copynav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  background-color: #2edcab;
+  padding: 5px;
+  border-radius: 10% 0% 0% 10% / 60% 0% 10% 60%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.main .copynav.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.main #particle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

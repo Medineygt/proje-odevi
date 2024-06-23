@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    min-width: 215px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: #282828;
+
+    .music {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        & > div {
+            margin: 10px;
+        }
+
+        .song-input {
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+            width: 100%;
+            text-align: center;
+            input {
+                width: 35%;
+                margin-top: 10px;
+                padding: 10px;
+                outline: none;
+                border-radius: 20px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .songs-info {
+            display: none;
+            z-index: 1;
+            width: 400px;
+            height: fit-content;
+            max-height: 215px;
+            background-color: #ff0000;
+            border-radius: 5px;
+            overflow: scroll;
+
+            .song {
+                cursor: pointer;
+                width: 390px;
+                height: 95px;
+                padding: 10px;
+                margin: 5px;
+                background-color: #3d3d3d;
+                display: flex;
+                flex-direction: row;
+                border-radius: 2px;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+                &:hover {
+                    animation: shake 0.3s;
+                }
+
+                .song-img {
+                    width: 80px;
+                    max-width: 80px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .song-detail {
+                    display: flex;
+                    flex-direction: column;
+                    width: 75%;
+                    height: 100%;
+                    margin: 0 auto;
+                    padding: 5px;
+                    justify-content: center;
+
+                    .title {
+                        font-size: 15px;
+                        color: #eee;
+                        max-width: 100%;
+                    }
+
+                    .detail {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 11px;
+                        color: #cacaca;
+                        margin-top: 5px;
+
+                        & > p {
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .song-selected {
+            display: none;
+            color: #eee;
+            border-radius: 4px;
+            width: 390px;
+            height: fit-content;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e1e1e1;
+            z-index: 1;
+            .selected-song {
+                width: 380px;
+                height: 95px;
+                padding: 10px;
+                margin: 5px;
+                background-color: #3d3d3d;
+                display: flex;
+                flex-direction: row;
+                border-radius: 2px;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+                .song-img {
+                    width: 80px;
+                    max-width: 80px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .song-detail {
+                    display: flex;
+                    flex-direction: column;
+                    width: 75%;
+                    height: 100%;
+                    margin: 0 auto;
+                    padding: 5px;
+                    justify-content: center;
+
+                    .title {
+                        font-size: 15px;
+                        color: #eee;
+                        max-width: 100%;
+                    }
+
+                    .detail {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 11px;
+                        color: #cacaca;
+                        margin-top: 5px;
+
+                        & > p {
+                            margin-top: 3px;
+                        }
+                    }
+                }
+            }
+
+            .youtube-embed{
+                border-radius: 4px;
+                width: 100%;
+                padding: 5px;
+                box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+            }
+
+            .download {
+                color: #eee;
+                padding: 5px 10px;
+                margin: 5px 0;
+                background-color: #ff0000;
+                border-radius: 100px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .plswait{
+        position: fixed;
+        right: 0;
+        top: 40px;
+        width: 200px;
+        font-size: 12px;
+        background-color: #ff1f57;
+        padding: 5px;
+        border-radius: 5px;
+        color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(150%);
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        &.active{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    #particle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px);
+    }
+    10% {
+        transform: translate(-1px, -2px);
+    }
+    20% {
+        transform: translate(-3px, 0px);
+    }
+    30% {
+        transform: translate(3px, 2px);
+    }
+    40% {
+        transform: translate(1px, -1px);
+    }
+    50% {
+        transform: translate(-1px, 2px);
+    }
+    60% {
+        transform: translate(-3px, 1px);
+    }
+    70% {
+        transform: translate(3px, 1px);
+    }
+    80% {
+        transform: translate(-1px, -1px);
+    }
+    90% {
+        transform: translate(1px, 2px);
+    }
+    100% {
+        transform: translate(1px, -2px);
+    }
+}

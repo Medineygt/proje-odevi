@@ -1,0 +1,1 @@
+document.querySelector(".loader").classList.toggle("hidden");

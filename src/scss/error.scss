@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    min-width: 215px;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    min-height: fit-content;
+    background-color: #222222;
+    align-items: center;
+    justify-content: center;
+
+    .error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            padding: 20px;
+            height: 275px;
+            background-color: darkblue;
+            opacity: 0.8;
+            z-index: 1;
+            border-radius: 5px;
+
+            .error-face,
+            .error-msg {
+                color: #fff;
+                font-size: 80px;
+                opacity: 1 !important;
+                margin: auto 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .error-msg {
+                font-size: 13px;
+            }
+            .error-go-main{
+                text-decoration: none;
+                padding: 3px;
+                background-color: #fff;
+                transition: .1s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.1);
+
+                }
+
+            }
+        }
+    }
+    #particle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

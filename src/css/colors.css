@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-width: 215px;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background-color: #222222;
+  width: 100%;
+}
+
+.main .colors {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #eee;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  z-index: 10;
+}
+
+.main .colors .colors-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+}
+
+.main .colors .colors-input > div {
+  margin: 0 30px;
+}
+
+.main .colors .colors-input .random {
+  cursor: pointer;
+  padding: 0;
+  background-color: #3b3b3b;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+.main .colors .colors-input .random:hover {
+  background-color: #007780;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.main .colors .colors-input .custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #3b3b3b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.main .colors .colors-input .custom input {
+  outline: none;
+  padding: 2px 5px;
+  width: 60px;
+  border-radius: 3px;
+}
+
+.main .colors .colors-input .custom input:focus {
+  outline: none;
+}
+
+.main .colors .colors-input .custom input:focus .main .colors .colors-input .custom input {
+  background-color: #fff;
+}
+
+.main .colors .colors-main {
+  overflow-y: scroll;
+  width: 100%;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding: 10px 60px;
+}
+
+.main .colors .colors-main .colors-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .colors .colors-main .colors-box .color-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  margin: 5px auto;
+  font-size: 13px;
+}
+
+.main .colors .colors-main .colors-box .color-box p {
+  margin: 5px 0;
+}
+
+.main .colors .colors-main .colors-box .color-box p span {
+  cursor: pointer;
+}
+
+.main .colors .colors-main .colors-box .color-box .copied {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: translateY(1000%);
+          transform: translateY(1000%);
+}
+
+.main .colors .colors-main .colors-box .color-box .copied.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.main .copy-msg {
+  position: fixed;
+  z-index: 999;
+  right: 30px;
+  background-color: royalblue;
+  color: #eee;
+  top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.main .copy-msg.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.main #particle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,158 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    min-width: 215px;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    min-height: fit-content;
+    background-color: #222222;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .wiki {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        width: 450px;
+        max-height: 650px;
+        padding: 10px 20px;
+        background-color: #36151e;
+        align-items: center;
+        .wiki-main {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .wiki-title {
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .title {
+                    font-size: 30px;
+                    color: #eee;
+                    font-family: "Pridi", sans-serif;
+                }
+
+                .photo {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .wiki-desc {
+                margin-top: 20px;
+                width: 100%;
+                max-height: 250px;
+                padding: 15px;
+                overflow: auto;
+
+                p {
+                    color: #eee;
+                    font-size: 13px;
+                }
+            }
+        }
+        .search {
+            div {
+                padding: 20px;
+                color: #e1e1e1;
+
+                input {
+                    border-radius: 100px;
+                    padding: 6px;
+                    background-color: transparent;
+                    outline: none;
+                    border: 2px solid #eeeeee57;
+                    transition: 0.1s ease-in-out;
+                    color: #6b6d6e;
+
+                    &:focus {
+                        outline: none;
+                        color: #cad9d7;
+                        background-color: #484c5062;
+                    }
+
+                    &::placeholder {
+                        color: #cad9d7;
+                    }
+                }
+            }
+        }
+        .buttons {
+            width: 100%;
+            height: 30px;
+            margin-top: 10px;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+
+            .copy,
+            .download {
+                margin: 0 auto;
+                color: #bababa;
+                cursor: pointer;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    color: #eee;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .copynav {
+        position: fixed;
+        top: 50%;
+        right: 0;
+        background-color: #2edcab;
+        padding: 5px;
+        border-radius: 10% 0% 0% 10% / 60% 0% 10% 60%;
+
+        transform: translateX(100%);
+
+        transition: 0.2s ease-in-out;
+        &.active {
+            transform: translateX(0);
+        }
+        z-index: 2;
+    }
+    #particle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}

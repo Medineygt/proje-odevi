@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/*
+  ::-webkit-scrollbar-track {
+    background: #202225;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #2e3338;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #464e58f3;
+  }
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-width: 215px;
+}
+
+.main {
+  display: inline-block;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  width: 100%;
+}
+
+.main .randomdiv {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+}
+
+.main .welcome,
+.main .biography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: #0e1212;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #e1e1e1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Pridi", sans-serif;
+}
+
+.main .welcome .welcome-text {
+  font-family: "Pridi", sans-serif;
+  color: #e1e1e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: blurEffect 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: blurEffect 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.main .welcome .welcome-text .title {
+  padding: 0;
+  margin: 0;
+}
+
+.main .welcome .welcome-text .nickname {
+  color: #682ae9;
+  font-size: 30px;
+}
+
+.main .biography {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .biography .biography-text {
+  margin: 30px 0;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .biography .biography-text .title {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.main .biography .biography-text .description {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main .tools {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 20%;
+  padding: 20px;
+  background-color: #0e1212;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .tools .title {
+  font-family: "Pridi", sans-serif;
+  color: #e1e1e1;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+.main .tools .tool-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.main .tools .tool-container .box {
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.main .tools .tool-container .box i {
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 20px;
+  padding: 10px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.main .tools .tool-container .box i:hover {
+  background-color: #5d27cf;
+  -webkit-box-shadow: 0 0 15px #5d27cf;
+          box-shadow: 0 0 15px #5d27cf;
+}
+
+.main .tools .tool-container .box i:hover ~ p {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  visibility: visible;
+  opacity: 1;
+}
+
+.main .tools .tool-container .box p {
+  position: absolute;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background-color: #555;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+.main .tools .tool-container .box p::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+@-webkit-keyframes blurEffect {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes blurEffect {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}

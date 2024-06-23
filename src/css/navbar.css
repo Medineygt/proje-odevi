@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-width: 215px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 9999;
+  -webkit-box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background-color: #1f2222;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.navbar.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.navbar .button {
+  position: absolute;
+  display: block;
+  right: -50px;
+  top: 35%;
+  z-index: 1;
+  padding: 15px;
+  font-size: 30px;
+  color: #e1e1e1;
+  float: right;
+  border-radius: 0% 50% 50% 0% / 0% 50% 50% 0%;
+  background-color: #1f2222;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  height: 150px;
+  padding: 20px;
+}
+
+.navbar .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px auto 120px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.navbar .pages .page {
+  padding: 10px;
+  text-decoration: none;
+  color: #9b9b9b;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.navbar .pages .page:hover {
+  color: #e1e1e1;
+}
+
+.navbar .social,
+.navbar .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.navbar .social a,
+.navbar .contact a {
+  text-decoration: none;
+  color: #9b9b9b;
+  padding: 5px;
+  font-size: 12px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.navbar .social .discord:hover,
+.navbar .contact .discord:hover {
+  color: #7289da;
+}
+
+.navbar .social .mail:hover,
+.navbar .contact .mail:hover {
+  color: #6bdf9f;
+}
+
+.navbar .social .instagram:hover,
+.navbar .contact .instagram:hover {
+  color: #e1306c;
+}
+
+.navbar .social .twitter:hover,
+.navbar .contact .twitter:hover {
+  color: #1da1f2;
+}
+
+.navbar .social .github:hover,
+.navbar .contact .github:hover {
+  color: #ccc;
+}
+
+.navbar .contact {
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}

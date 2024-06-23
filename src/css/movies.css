@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  min-width: 215px;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #0e1212;
+  overflow: scroll;
+}
+
+.main .search {
+  width: 100%;
+  position: fixed;
+  background-color: #5d27cf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 10;
+}
+
+.main .search .trends {
+  cursor: pointer;
+}
+
+.main .search div {
+  padding: 20px;
+  color: #e1e1e1;
+}
+
+.main .search div input {
+  border-radius: 100px;
+  padding: 4px;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #eeeeee57;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  color: #6b6d6e;
+}
+
+.main .search div input:focus {
+  outline: none;
+  color: #cad9d7;
+  background-color: #484c5062;
+}
+
+.main .search div input::-webkit-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .search div input:-ms-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .search div input::-ms-input-placeholder {
+  color: #cad9d7;
+}
+
+.main .search div input::placeholder {
+  color: #cad9d7;
+}
+
+.main .err {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 350px;
+  height: 300px;
+  background-color: #ff1f57;
+  border-radius: 5px;
+}
+
+.main .err p, .main .err i {
+  color: #f5f1f1;
+  padding: 10px;
+}
+
+.main .err i {
+  font-size: 80px;
+}
+
+.main .moviesAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 70px 50px 10px;
+}
+
+.main .moviesAll .movies {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 200px;
+  height: 350px;
+  background-color: #3673c4;
+  margin: 5px auto;
+  -webkit-box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.25);
+  color: #eee;
+}
+
+.main .moviesAll .movies .poster {
+  width: 100%;
+  height: 300px;
+}
+
+.main .moviesAll .movies .poster img {
+  width: 100%;
+  height: 100%;
+}
+
+.main .moviesAll .movies .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 5px;
+  height: 100%;
+  font-size: 15px;
+  overflow: auto;
+}
+
+.main .moviesAll .movies .rate {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 2px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 2px solid #666666;
+  background-color: #333333;
+  z-index: 1;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.main .moviesAll .movies .overview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  padding: 20px 10px;
+  color: #1e1e1e;
+  background-color: #eee;
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  overflow: auto;
+}
+
+.main .moviesAll .movies:hover .overview {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}

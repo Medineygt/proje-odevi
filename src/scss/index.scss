@@ -1,0 +1,190 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+/*
+  ::-webkit-scrollbar-track {
+    background: #202225;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #2e3338;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #464e58f3;
+  }
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    min-width: 215px;
+}
+
+.main {
+    display: inline-block;
+    min-height: fit-content;
+    width: 100%;
+
+    .randomdiv {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: aqua;
+    }
+
+    .welcome,
+    .biography {
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+        width: 100%;
+        height: 100%;
+        background-color: #0e1212;
+        align-items: center;
+        color: #e1e1e1;
+        justify-content: center;
+        font-family: "Pridi", sans-serif;
+    }
+    .welcome {
+        .welcome-text {
+            font-family: "Pridi", sans-serif;
+            color: #e1e1e1;
+            display: flex;
+            font-size: 80px;
+            flex-direction: column;
+            align-items: center;
+            animation: blurEffect 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+
+            .title {
+                padding: 0;
+                margin: 0;
+            }
+            .nickname {
+                color: #682ae9;
+                font-size: 30px;
+            }
+        }
+    }
+    .biography {
+        flex-direction: column;
+        .biography-text {
+            margin: 30px 0;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .title {
+                font-size: 50px;
+                font-weight: 700;
+            }
+            .description {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .tools {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 20%;
+        padding: 20px;
+        background-color: #0e1212;
+        flex-direction: column;
+
+        .title {
+            font-family: "Pridi", sans-serif;
+            color: #e1e1e1;
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
+
+        .tool-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 50px;
+            .box {
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                cursor: pointer;
+                text-decoration: none;
+                color: #fff;
+
+                i {
+                    border: 2px solid #fff;
+                    border-radius: 40px;
+                    font-size: 20px;
+                    padding: 10px;
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        background-color: #5d27cf;
+                        box-shadow: 0 0 15px #5d27cf;
+                    }
+                    &:hover ~ p {
+                        transform: translateY(-40px);
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    font-size: 12px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-50px);
+                    transition: 0.2s ease-in-out;
+                    background-color: #555;
+                    padding: 3px;
+                    border-radius: 2px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        margin-left: -5px;
+                        border-width: 5px;
+                        border-style: solid;
+                        border-color: #555 transparent transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes blurEffect {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
