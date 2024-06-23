@@ -14,7 +14,6 @@
   "dependencies": {
     "axios": "^0.21.4",
     "express": "^4.17.1",
-    "mongoose": "^6.0.12",
     "superagent": "^6.1.0",
     "translate-google": "^1.5.0",
     "youtube-sr": "^4.1.7",
